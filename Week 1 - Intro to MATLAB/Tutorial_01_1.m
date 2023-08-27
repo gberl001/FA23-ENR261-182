@@ -8,18 +8,18 @@ clear  % clear clears the command window and all variables
 
 % Output of the title and author to the command window.
 tutorialName = "Tutorial_01_1";
-name = "Geoff Berl";
+name = "";
 assistedBy = "";
 fprintf("Output for %s written by %s, with assistance from %s.\n\n", tutorialName, name, assistedBy)
 
 % Finish the following commands
 % Add 2 and 3
-addition = 2 + 3
+addition =
 % Subtract 3 from 2
-subtraction = 2 - 3
+subtraction =
 % Multiply 2 by 3
-multiplication = 2*3
+multiplication =
 % Divide 1 by 2
-division = 1/2
+division =
 % Show 2 to the power of 3
-exponentiation = 2^3
+exponentiation =
