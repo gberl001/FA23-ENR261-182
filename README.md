@@ -53,7 +53,7 @@ new computer you use, in order to get access to your files to make changes.
 1. Run the following program **git-bash.exe**
 1. Run the following command (changing `YOUR_USERNAME` to your github username and update `LASTNAME` with your last name)
 
-       git clone https://github.com/YOUR_USERNAME/SP23-ENR261-182-LASTNAME.git
+       git clone https://github.com/YOUR_USERNAME/FA23-ENR261-182-LASTNAME.git
 
 1. You will be prompted to use an "authentication manager", accept the default and log into your Github account when prompted.
 1. You will see some information printed to the screen as the repository is cloned.
