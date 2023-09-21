@@ -111,7 +111,7 @@ So now, what MATLAB does is takes our string `"%i\n\n"` and replaces `%i` with t
 ### Text and Values
 Printfing text and values is pretty straight forward, we just add text to the format specification like so.
 ```Matlab
-fprintf("varA = %i\n\n")
+fprintf("varA = %i\n\n", varA)
 ```
 Or if we wanted to output like our `disp` example above, we can do it all in one line with the power of the `\n` character.
 ```Matlab
@@ -120,7 +120,7 @@ fprintf("varA =\n\n   %i\n\n", varA)
 #### Field Width and Precision
 What makes format specifiers even more powerful is the ability to specify the **field width** and **precision** (precision only applies to floating point values). Field width is a number that is declared immediately following the `%` and specifies how many character spaces a value will take up. This is most useful with printing a list where you want all of the values to be right-justified so they line up nicely. Here's an example where I'll supply hardcoded values.
 ```
-fprintf("Some right-justified numbers")
+fprintf("Some right-justified numbers\n")
 fprintf("%5i\n", 25)
 fprintf("%5i\n", 100)
 fprintf("%5i\n\n", 1000)
