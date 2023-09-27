@@ -35,8 +35,6 @@ fprintf("Output for %s written by %s, with assistance from %s.\n\n", programName
 ```
 ## Example Output
 Your program output values and format should match the following.
-![Program_04_2_Example_Output.png](images/Program_04_2_Example_Output.png)
-**IMPORTANT: You should also see the sorted grades in the `FinalGrades.txt` file**
 
-Here is an example of the first few lines of the text file
-![Program_04_1_Example_Text_File.png](images/Program_04_1_Example_Text_File.png)
+**IMPORTANT: You should also ensure that the file named `Tutorial_04_1.xlsx` is updated by your program.**
+![Program_04_1_Example_Output.png](images/Program_04_1_Example_Output.png)
