@@ -14,13 +14,9 @@ assistedBy = "";
 fprintf("Output for %s written by %s, with assistance from %s.\n\n", programName, name, assistedBy)
 ```
 ## Review the function
-At this point, please open the inefficientSort.mlx file and review the function, read the description and all text within the function. Read through the comments to understand what the function is doing.
-
+At this point, please open the [inefficientSort.md](inefficientSort.md) file and review the function, read the description and all text within the function. Read through the comments to understand what the function is doing.
 ## Run the function
-As shown in the example portion of the function file, run the function in this code block below. First, print out the unsorted version, then the sorted (as shown in the Example Output below).
-```Matlab
-
-```
+As shown in the example portion of [inefficientSort.md](inefficientSort.md), create an m-file for `Tutorial_06_1`. In the m-file, first print out the unsorted version, then the sorted.
 ## Adding doc for help
 Adding the proper comments to your function will give you documentation in the help. Go ahead and right click on inefficientSort and select "Help on inefficientSort" to see the pop up dialog. It's also shown below. Documentation is important, especially if you plan to share your code with someone else, they need to know how to use the function, and what to expect from it.
 ![Tutorial_06_1_InefficientSort.png](images/Tutorial_06_1_InefficientSort.png)
