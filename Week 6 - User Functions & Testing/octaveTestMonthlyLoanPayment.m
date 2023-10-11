@@ -53,6 +53,7 @@ result = metaData.function + " " + result;
 
 end
 
+% Test a few various valid cases
 function result = testValidSolutionArray()
 principals = [10000, 5500.25, 22999.99];
 rates = [0.03, 0.05, 0.01];
@@ -65,6 +66,7 @@ actualPmts = getMonthlyLoanPayment(principals, rates, pmtCounts);
 result = all(expectedPmts - actualPmts < 0.001);
 end
 
+% Test a valid solution with a scalar principal
 function result = testValidSolutionScalar()
 principal = 40000;    % $40,000
 rate = 0.03;          % 3% interest rate
@@ -77,6 +79,7 @@ actualPmt = getMonthlyLoanPayment(principal, rate, numPmts);
 result = all(expectedPmt - actualPmt < 0.001);
 end
 
+% Test a zero principal amount returns 0 as payment
 function result = testZeroPrincipal()
 principal = 0;        % $0
 rate = 0.03;          % 3% interest rate
@@ -89,18 +92,20 @@ actualPmt = getMonthlyLoanPayment(principal, rate, numPmts);
 result = actualPmt == expectedPmt;
 end
 
+% Test that negative principal returns blank indicating an error
 function result = testNegativePrincipal()
 principal = -10000;
 rate = 0.03;
 numPmts = 5*12;
 
 % Get expected and actual
-expectedPmt = 0;
+expectedPmt = [];
 actualPmt = getMonthlyLoanPayment(principal, rate, numPmts);
 
 result = actualPmt == expectedPmt;
 end
 
+% Test that a negative rate returns blank indicating an error
 function result = testNegativeRate()
 principal = 10000;
 rate = -0.03;
@@ -113,6 +118,7 @@ actualPmt = getMonthlyLoanPayment(principal, rate, numPmts);
 result = isempty([actualPmt, expectedPmt]);
 end
 
+% Test an empty principal value returns blank indicating an error
 function result = testEmptyPrincipal()
 expectedPmt = [];
 actualPmt = getMonthlyLoanPayment([], 0.04, 10);
@@ -120,6 +126,7 @@ actualPmt = getMonthlyLoanPayment([], 0.04, 10);
 result = isempty([actualPmt, expectedPmt]);
 end
 
+% Test an empty rate value returns a blank indicating an error
 function result = testEmptyRate()
 expectedPmt = [];
 actualPmt = getMonthlyLoanPayment(10000, [], 10);
@@ -127,6 +134,7 @@ actualPmt = getMonthlyLoanPayment(10000, [], 10);
 result = isempty([actualPmt, expectedPmt]);
 end
 
+% Test an empty number of payments value returns blank indicating an error
 function result = testEmptyNumPayments()
 expectedPmt = [];
 actualPmt = getMonthlyLoanPayment(1000, 0.04, []);
@@ -134,6 +142,7 @@ actualPmt = getMonthlyLoanPayment(1000, 0.04, []);
 result = isempty([actualPmt, expectedPmt]);
 end
 
+% Test a string value for principal returns blank indicating an error
 function result = testPrincipalString()
 expectedPmt=[];
 actualPmt=getMonthlyLoanPayment("test", 0.04, 10);
@@ -141,6 +150,7 @@ actualPmt=getMonthlyLoanPayment("test", 0.04, 10);
 result = isempty([actualPmt, expectedPmt]);
 end
 
+% Test a string value for rate returns blank indicating an error
 function result = testRateString()
 expectedPmt=[];
 actualPmt=getMonthlyLoanPayment(10000, "rate", 10);
@@ -148,6 +158,7 @@ actualPmt=getMonthlyLoanPayment(10000, "rate", 10);
 result = isempty([actualPmt, expectedPmt]);
 end
 
+% Test a string number of payments value returns blank indicating an error
 function result = testNumPaymentsString()
 expectedPmt=[];
 actualPmt=getMonthlyLoanPayment(10000, 0.04, "ten");
