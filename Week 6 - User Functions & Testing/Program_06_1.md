@@ -1,7 +1,9 @@
 # Program\_06\_1
 ## Requirements
 Given the following equation, create a function named **getMonthlyLoanPayment**.
+
 ![Program_06_1_Equation.png](images/Program_06_1_Equation.png)
+
 **The function shall:**
 * Compute a monthly loan payment given the principal, yearly interest rate, and number of payments in months
 * Support vectors, that is, when provided with vectors of data for each parameter, return a vector of monthly payment amounts.
